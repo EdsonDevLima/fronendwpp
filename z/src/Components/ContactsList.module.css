@@ -1,0 +1,103 @@
+.ListUsers{
+  min-width: 30%;
+  height: 100vh;
+  background-color: #111b21;
+  overflow-y: scroll;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #111b21; /* Cor do thumb e do track */
+
+}
+
+.ListUsers div{
+  width: 100%;
+  color: rgb(157, 155, 155);
+  min-height: 80px;
+  border-top: solid 1px #283f4d;
+  border-bottom: solid 1px #283f4d;
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ListUsers h3{
+  width: 50%;
+  color: white;
+  text-align: start;
+
+}
+.ListUsers span{
+  font-size: 13px;
+}
+.ListUsers img{
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.FilterUsers{
+  width: 100%;
+  position: sticky;
+  background-color: #111b21;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px  !important;
+  border: none !important;
+  border-bottom:solid 1px #283f4d  !important;
+  
+
+}
+.FilterUsers h1{
+  width: 100%;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+.FilterUsers input{
+  width: 85%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  width: 70%;
+  background-color: #202c33;
+  color: white;
+  padding: 5px;
+}
+.ConteinerBtns{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  border: none !important
+}
+.ConteinerBtns button{
+  border: none;
+  background-color: #202c33;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 50px;
+  color: #8696a0;
+}
+
+/* Estiliza a barra de rolagem */
+.ListUsers::-webkit-scrollbar {
+  width: 5px; /* Largura da barra de rolagem */
+}
+
+/* Estiliza o track (fundo da barra de rolagem) */
+.ListUsers::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Estiliza o thumb (a parte que se move) */
+.ListUsers::-webkit-scrollbar-thumb {
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estiliza o thumb ao passar o mouse */
+.ListUsers::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}

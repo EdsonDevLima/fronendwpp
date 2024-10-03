@@ -1,0 +1,113 @@
+.sectionLogin{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+.sectionLogin header{
+  width: 100%;
+  min-height: 30vh;
+  background-color: #00a884;
+  display: flex;
+  align-items: start;
+}
+.sectionLogin header div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.sectionLogin header div h2{
+  color: white;
+  margin: 10px;
+}
+.iconwpp{
+  color: white;
+  font-size: 50px;
+  background-color: #25d366;
+  border-radius: 100%;
+  padding: 8px;
+}
+.formLogin{
+  width: 35%;
+  padding: 10px;
+  min-width: 300px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 1px 1px 8px 1px rgb(199, 199, 199);
+  border-radius:3px ;
+  margin-top: 10px;
+  color: #6f8171;
+  margin-top: -50px;
+  transition: 1s;
+
+}
+
+.formLogin h1 {
+  color:#6f8171;
+  width: 100%;
+  text-align: center;
+}
+.formLogin label{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 10px;
+  color:#6f8171;
+}
+.formLogin p{
+  margin: 9px;
+}
+
+.formLogin label input{
+  height: 25px;
+  border: solid 1px #6f8171;
+  border-radius: 4px;
+  outline: none;
+}
+.formLogin input[type = "submit"]{
+  font-size: 20px;
+  color: #6f8171;
+  background-color:#00a884;
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+.skipLogin{
+  width: 250px;
+  min-height: 250px;
+  color:#6f8171;
+  background-color: white;
+  box-shadow: 1px 1px 8px 1px rgb(199, 199, 199);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+  
+}
+.conteinerFormMedia{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-around;
+
+
+}
+
+.conteinerFormMedia p{
+  margin: 10px;
+  font-size: 18px;
+}
+.formLogin button{
+  border: none;
+  padding: 5px;
+  color: #6f8171;
+  margin-top: 8px;
+}
