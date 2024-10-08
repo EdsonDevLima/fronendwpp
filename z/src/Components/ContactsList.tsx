@@ -2,10 +2,14 @@ import Styles from "./ContactsList.module.css"
 import { useNavigate} from "react-router-dom"
 import { useEffect,useState } from "react"
 import { UserData } from "../Types/UserData"
+import { ContextApp } from "../Context/ContextApp"
+import { useContext } from "react"
+import { IContextUser } from "../Types/IContextUser"
 const ContactsList = ()=>{
 
 const [Users,setUsers] = useState<UserData[]>([])
-
+const contextapp = useContext(ContextApp)
+const {Logout} = contextapp as IContextUser
 useEffect(()=>{
 
 const requestUsers = async ()=>{
@@ -32,7 +36,7 @@ return(
       <div className={Styles.ConteinerBtns}>
       <button>Tudo</button>        
       <button>Grupos</button>        
-      <button>Desconectar</button>        
+      <button onClick={Logout}>Desconectar</button>        
       </div>
 
       

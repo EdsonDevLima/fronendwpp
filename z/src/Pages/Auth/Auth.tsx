@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { IContextUser } from "../../Types/IContextUser";
 
 const Auth  = ()=>{
-const [isLogin,setIsLogin] = useState<boolean>(true)
+const [isLogin,setIsLogin] = useState<boolean>(false)
 const usecontext = useContext<IContextUser | null>(ContextApp)
 
 //data user
@@ -78,9 +78,10 @@ return (
             <input type="text" onChange={(e)=>setPassword(e.target.value)}/>
           </label>
             <input type="submit" value={!isLogin ? "Registrar-se": "Fazer login"}/>
-            <button onClick={(  )=>isLogin ? setIsLogin(false) : setIsLogin(true)}>{!isLogin ? "Ainda nao me cadastrei": "ja possuo login"}</button>
           
-      </form>
+          
+      </form>  
+      <button className={Styles.buttonT} onClick={(  )=>isLogin ? setIsLogin(false) : setIsLogin(true)}>{!isLogin ? "Ainda nao me cadastrei": "ja possuo login"}</button>
       {isLogin && <div className={Styles.skipLogin}>
         <h1>Pular Login</h1>
         <p> Email:User22</p>

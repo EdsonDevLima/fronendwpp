@@ -36,6 +36,14 @@ const Login =async (email:string,password:string)=>{
 
 }
 
+
+const Logout = async()=>{
+  localStorage.removeItem("token")
+  navigate("/auth")
+
+}
+
+
 const Register = async(name:string,email:string,password:string,confirmPassword:string)=>{
 
   try{
@@ -56,13 +64,18 @@ const authentication =async (route?:string)=>{
     const tokenB = localStorage.getItem("token")
     const token = JSON.parse(tokenB || "")
     console.log(token,tokenB)
-    const request = await fetch("http://localhost:4000/auth/authenticate",{headers:{"Content-Type":"application/json"},method:"POST",body:token})
+    const request = await fetch("http://localhost:4000/auth/authenticate",{headers:{"Content-Type":"application/json"},method:"POST",body:JSON.stringify({token:token})})
     const response = await request.json()
     setId(response.id)
     setEmail(response.email)
     setName(response.name)
     setAuthenticate(true)
-    navigate(`/${route}`)
+    if(route){
+      navigate(`/${route}`)
+    }else{
+      navigate("")
+    }
+    
 
   }
   catch(err){
@@ -72,7 +85,7 @@ const authentication =async (route?:string)=>{
 }
 
 return (
-    <ContextApp.Provider value={{Authenticate,Id,Email,Name,Login,Register,setEmail,setAuthenticate,setId,setName,authentication}}>
+    <ContextApp.Provider value={{Authenticate,Id,Email,Name,Login,Logout,Register,setEmail,setAuthenticate,setId,setName,authentication}}>
       {children}
     </ContextApp.Provider>
   )

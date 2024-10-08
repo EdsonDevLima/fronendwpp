@@ -4,8 +4,13 @@ import { Outlet } from "react-router-dom"
 import { ContextApp } from "../../Context/ContextApp"
 import { useContext,useEffect } from "react"
 import { IContextUser } from "../../Types/IContextUser"
+
+
+
 const Home = ()=>{
 const ContextAppp = useContext(ContextApp)
+
+
 
 useEffect(()=>{
 const {authentication} = ContextAppp as IContextUser
