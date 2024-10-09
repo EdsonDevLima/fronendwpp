@@ -1,7 +1,6 @@
 import { createContext } from "react"
 import { IContextUser } from "../Types/IContextUser"
 import { useState } from "react"
-export const ContextApp = createContext<IContextUser | null>(null)
 import { useNavigate } from "react-router-dom"
 
 
@@ -9,6 +8,7 @@ import { useNavigate } from "react-router-dom"
 
 
 
+export const ContextApp = createContext<IContextUser | null>(null)
 
 
 
